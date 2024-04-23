@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-import Todo from "./components/Todo";
-import Todolist from './components/Todolist'
-import AddItem from './components/AddItem'
+import Todo from "./Components/Todo";
+import Todolist from './Components/Todolist'
+import AddItem from './Components/AddItem'
 
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "./components/navbar";
+import Navbar from "./Components/navbar";
 
 
 function App() {
