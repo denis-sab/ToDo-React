@@ -18,15 +18,12 @@ function App() {
       <div className="row ">
         <AddItem />
       </div>
-     
       <div className="row">
         <Todolist />
       </div>
-      
       <div className="row">
         <Todo />
       </div>
-
     </section>
     </>
   );
