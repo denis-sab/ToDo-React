@@ -1,6 +1,6 @@
 
 import { useState } from 'react'
-import Todo from './components/Todo'
+import Todo from "./Components/Todo.jsx"
 import './App.css'
 import AddnewTask from './Components/AddItem'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,19 +10,15 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+
     <section className='container'>
 
-      <div className='row'>
-        <AddnewTask/>
-      </div>
-      <div className='row'>
-      <Todo/>
-      </div>
+      <AddnewTask/>
 
+      <Todo/>
 
     </section>
-    </>
+ 
   )
 }
 
