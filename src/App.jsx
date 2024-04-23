@@ -6,6 +6,7 @@ import AddItem from './components/AddItem'
 
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./components/navbar";
 
 
 function App() {
@@ -16,9 +17,9 @@ function App() {
 
   return (
     <>
-      <nav>
-
-      </nav>
+      
+      <Navbar />
+      
       <header>
         
       </header>
