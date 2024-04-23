@@ -1,9 +1,11 @@
 import { useState } from "react";
+
 import Todo from "./components/Todo"
 import Todolist from "./components/Todolist"
 import AddItem from "./components/AddItem"
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./Components/navbar";
 
 
 function App() {
@@ -11,23 +13,25 @@ function App() {
   const toDoArray = [] ;
   const localStorageArray = [];
   const object = {} ;
+
   return (
     <>
-    <section className="container ">
-
-      <div className="row ">
-        <AddItem />
-      </div>
-     
-      <div className="row">
-        <Todolist />
-      </div>
       
-      <div className="row">
+      <Navbar />
+      
+      <header>
+        
+      </header>
+    
+      <section className=" ">
+    
+        <AddItem />
+    
+        <Todolist />
+    
         <Todo />
-      </div>
-
-    </section>
+    
+      </section>
     </>
   );
 }

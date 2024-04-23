@@ -1,3 +1,4 @@
+
 .iconssize {
     height: 30px;
     width: 30px;
@@ -7,4 +8,12 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
   
-  
+.navbar {
+  height: 12rem;
+  background-color: #85586F;
+} 
+
+.logonav {
+  height: 11rem;
+  width: 11rem;
+}
