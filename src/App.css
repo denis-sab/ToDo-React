@@ -1,0 +1,29 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+table {
+  border: 2px solid;
+  width: 100%;
+  background-color: #f2f2f2;
+
+  
+ }
+
+.th1 {
+ text-align: left;
+}
+
+
+.th2 {
+ text-align: center;
+}
+
+
+.th3 {
+  text-align: right;
+}
+
