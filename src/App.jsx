@@ -1,5 +1,5 @@
 import './App.css'
-import AddnewTask from './Components/AddItem'
+import AddnewTask from './components/AddItem'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
