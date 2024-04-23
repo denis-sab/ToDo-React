@@ -4,6 +4,7 @@ import Todolist from './components/Todolist'
 import AddItem from './components/AddItem'
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./components/navbar";
 
 
 function App() {
@@ -13,9 +14,9 @@ function App() {
   const object = {} ;
   return (
     <>
-      <nav>
-
-      </nav>
+      
+      <Navbar />
+      
       <header>
         
       </header>
