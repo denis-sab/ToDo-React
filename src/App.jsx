@@ -4,7 +4,7 @@ import Todo from './components/Todo'
 import './App.css'
 import AddnewTask from './Components/AddItem'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   const [count, setCount] = useState(0)
