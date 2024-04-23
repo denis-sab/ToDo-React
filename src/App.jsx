@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Todo from "./Components/Todo"
-import Todolist from "./Components/Todolist"
-import AddItem from "./Components/AddItem"
+import Todo from "./components/Todo";
+import Todolist from './components/Todolist'
+import AddItem from './components/AddItem'
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -13,21 +13,17 @@ function App() {
   const object = {} ;
   return (
     <>
-    <section className="container ">
+      <nav>
 
-      <div className="row ">
+      </nav>
+      <header>
+        
+      </header>
+      <section className=" ">
         <AddItem />
-      </div>
-     
-      <div className="row">
         <Todolist />
-      </div>
-      
-      <div className="row">
         <Todo />
-      </div>
-
-    </section>
+      </section>
     </>
   );
 }
