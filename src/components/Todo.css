@@ -12,6 +12,15 @@
   height: 6rem;
 }  
 
+.navbarcolor {
+  background-color: #85586F;
+}  
+
+.header {
+  background-color: #FDF0D1;
+  height: 12rem;
+}
+
 .logo {
   height: 82px;
   width: 92px;
