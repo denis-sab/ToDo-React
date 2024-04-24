@@ -38,8 +38,11 @@ function App() {
 
       <section className="cont d-flex justify-content-center">
         <div className="col m-5 contclr border border-primary rounded">
-            <AddItem onChange={onChange}/>
-            
+            <AddItem 
+              onChange={onChange}
+              onSubmit={onSubmit}
+              newTodo={newTodo}
+            />
         </div>    
         <div className="col m-5 contclr border border-primary rounded">
             <Todolist />
