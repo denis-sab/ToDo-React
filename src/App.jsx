@@ -13,8 +13,8 @@ function App() {
   const [newTodo, setNewTodo] = useState({});
   
   const onChange = ({target}) => {
-    const {name, value} = target;
-    setNewTodo((prev) => prev({...prev, id:Date.now(), [name]: value}))
+    const {value} = target;
+    setNewTodo((prevTodo) => prev({...prevTodo, id:Date.now(), value}))
   }
   
   const [allTodos, setAllTodos] = useState([]);
