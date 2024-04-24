@@ -4,6 +4,7 @@ import Todolist from "./components/Todolist"
 import AddItem from "./components/AddItem"
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Navbar } from "react-bootstrap";
 
 
 function App() {
@@ -19,12 +20,12 @@ function App() {
       <header>
         
       </header>
-      <section className="container row ">
-        <div className="col">
+      <section className="">
+        <div className="">
             <AddItem /><Todo />
             
         </div>    
-        <div className="col">
+        <div className="">
             <Todolist />
         </div>
       </section>

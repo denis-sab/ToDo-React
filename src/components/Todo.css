@@ -7,4 +7,12 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
   
-  
+.navbar {
+  background-color: #85586F;
+  height: 6rem;
+}  
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
