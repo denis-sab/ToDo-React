@@ -3,15 +3,19 @@ import Todo from "./components/Todo"
 import Todolist from "./components/Todolist"
 import AddItem from "./components/AddItem"
 import "./App.css";
+import './components/Todo.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar } from "react-bootstrap";
 
 
 function App() {
-  const [count, setCount] = useState(0);
-  const toDoArray = [] ;
-  const localStorageArray = [];
-  const object = {} ;
+  const [newTodo, setNewTodo] = useState({});
+
+  const [allTodos, setAllTodos] = useState([]);
+
+  const [localStorage, setLocalStorage] = useState();
+
+  
   return (
     <>
       
@@ -20,7 +24,7 @@ function App() {
       <header>
         
       </header>
-      <section className="">
+      <section className="cont">
         <div className="">
             <AddItem /><Todo />
             
