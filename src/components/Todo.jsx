@@ -1,4 +1,4 @@
-import "./Todo.css";
+import './Todo.css'
 
 function Todo() {
     return <div className='m-3 d-flex justify-content-evenly'>
