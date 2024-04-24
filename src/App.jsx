@@ -24,12 +24,12 @@ function App() {
       <header>
         
       </header>
-      <section className="cont">
-        <div className="">
-            <AddItem /><Todo />
+      <section className="cont d-flex justify-content-center">
+        <div className="col m-5 contclr">
+            <AddItem />
             
         </div>    
-        <div className="">
+        <div className="col m-5 contclr">
             <Todolist />
         </div>
       </section>

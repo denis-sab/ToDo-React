@@ -14,10 +14,13 @@
 
 .logo {
   height: 82px;
-  width: 92
-  px;
+  width: 92px;
 }
 
 .cont {
   background-color: #AC7D88;
+}
+
+.contclr {
+  background-color: #FDF0D1;
 }
