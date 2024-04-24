@@ -23,10 +23,14 @@ function App() {
       <header>
         
       </header>
-      <section className=" ">
-        <AddItem />
-        <Todolist />
-        <Todo />
+      <section className="container row ">
+        <div className="col">
+            <AddItem /><Todo />
+            
+        </div>    
+        <div className="col">
+            <Todolist />
+        </div>
       </section>
     </>
   );
