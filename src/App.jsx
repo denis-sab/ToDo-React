@@ -10,6 +10,8 @@ import Header from "./components/header";
 function App() {
   const [newTodo, setNewTodo] = useState({});
   const [allTodos, setAllTodos] = useState([]);
+  const [dates, setDates] = useState({date: ''});
+  const [names, setNames] = useState('');
 
   useEffect(() => {
     const savedTodos = JSON.parse(localStorage.getItem('bigList') || '[]');
@@ -21,7 +23,18 @@ function App() {
 
   const onChange = ({ target }) => {
     const { value } = target;
-    setNewTodo((prevTodo) => ({ ...prevTodo, id: Date.now(), title: value }));
+    setNewTodo((prevTodo) => ({ ...prevTodo, id: Date.now(), title: value, date: '' }));
+  };
+
+  const onChange2 = ({ target }) => {
+    const {value} = target;
+    setDates({ date: value });
+    console.log(dates)
+  };
+
+  const onChange3 = ({ target }) => {
+    const { value } = target;
+    setNames(value);
   };
 
   const onDelete = (TodoIdToRemove) => {
@@ -33,11 +46,9 @@ function App() {
     if (!newTodo.title) return;
     const updatedTodos = [newTodo, ...allTodos];
     setAllTodos(updatedTodos);
-
     setNewTodo({});
   };
 
-  // Guardar datos en localStorage cuando allTodos cambie
   useEffect(() => {
     if (typeof window !== 'undefined' && window.localStorage) {
       try {
@@ -56,8 +67,12 @@ function App() {
         <div className="col m-5 contclr border border-primary rounded contclr2">
           <AddItem 
             onChange={onChange}
+            onChange2={onChange2}
+            onChange3={onChange3}
             onSubmit={onSubmit}
             newTodo={newTodo}
+            dates={dates}
+            names={names}
           />
         </div>
         <div className="col m-5 contclr border border-primary rounded">
