@@ -5,10 +5,10 @@ function AddnewTask ({newTodo, onSubmit, onChange}) {
 
     return (
 
-    <div className=''>
+    <div className='contclr2'>
 
 
-        <h4 className="navbarcolor text-white" >Add new task</h4>
+        <h4 className="navbarcolor fontstyle2" >Add new task</h4>
 
       
 
