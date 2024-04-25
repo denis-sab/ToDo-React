@@ -8,11 +8,11 @@ function Todolist() {
             <div classname='col '>
              
         
-                  <h4 className='mb-0 bg-secondary border'>To Do List</h4>
+                  <h4 className='navbarcolor text-white'>To Do List</h4>
                   <br />
                   <table classname='table table-bordered '>
                     
-                      <tr classname='tr1'>
+                      {/* <tr classname='tr1'>
                         <th classname='th1' >
                           No.
                         </th>
@@ -22,7 +22,7 @@ function Todolist() {
                         <th classname='th3' >
                           Actions
                         </th>
-                      </tr>
+                      </tr> */}
                  
                   </table>
                 </div>

@@ -14,17 +14,18 @@ function App() {
   
   const onChange = ({target}) => {
     const {value} = target;
-    setNewTodo((prevTodo) => prev({...prevTodo, id:Date.now(), value}))
+    setNewTodo((prevTodo) => ({...prevTodo, id: Date.now(), title: value}))
   }
   
   const [allTodos, setAllTodos] = useState([]);
     const onSubmit = (event) => {
       event.preventDefault();
-      if (!newTask.title) return;
-      setAllTodos((prev) => [newTodo, ...prev]);
+      if (!newTodo.title) return;
+      setAllTodos((prevAllTodo) => [newTodo, ...prevAllTodo]);
       setNewTodo({});
+      
   };
-
+  console.log(allTodos)
 
   const [localStorage, setLocalStorage] = useState();
 
