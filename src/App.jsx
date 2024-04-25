@@ -19,6 +19,10 @@ function App() {
   const onDelete = (TodoIdToRemove) => {
     setAllTodos((prev) => prev.filter((Todo) => Todo.id !== TodoIdToRemove));
   };
+
+  const onEdit = () => {
+    setAllTodos((prev) => prev((Todo) => Todo.id !== TodoTitleToEdit))
+  }
   
   const [allTodos, setAllTodos] = useState([]);
     const onSubmit = (event) => {
@@ -53,6 +57,7 @@ function App() {
             <Todolist 
               onDelete={onDelete} 
               allTodos={allTodos}
+              onEdit={onEdit}
             />
         </div>
       </section>
