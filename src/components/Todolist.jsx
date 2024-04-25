@@ -10,7 +10,7 @@ function Todolist() {
             <div classname='col '> */}
              
         
-                  <h4 className='navbarcolor text-white fontstyle'>To Do List</h4>
+                  <h4 className='navbarcolor fontstyle'>To Do List</h4>
                   {/* <table classname='table table-bordered '> */}
                     
                       <Todo />
