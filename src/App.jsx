@@ -15,9 +15,9 @@ function App() {
     const {value} = target;
     setNewTodo((prevTodo) => ({...prevTodo, id: Date.now(), title: value}))
   }
-
+  
   const onDelete = ({TodoIdToRemove}) => {
-    setAllTasks((prev) => prev.filter((Todo) => Todo.id !== TodoIdToRemove));
+    setAllTodos((prev) => prev.filter((Todo) => Todo.id !== TodoIdToRemove));
 
   }
   
@@ -30,7 +30,7 @@ function App() {
       
   };
 
-  console.log(allTodos)
+ 
 
   const [localStorage, setLocalStorage] = useState();
 
@@ -51,7 +51,10 @@ function App() {
             />
         </div>    
         <div className="col m-5 contclr border border-primary rounded">
-            <Todolist />
+            <Todolist 
+              onDelete={onDelete} 
+              allTodos={allTodos}
+            />
         </div>
       </section>
     </>

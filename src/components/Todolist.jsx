@@ -1,6 +1,6 @@
 import Todo from './Todo.jsx';
 
-function Todolist() {
+function Todolist({allTodos, onDelete}) {
   return (
     <div>
       {/* <div classname='vh-100'> */}
@@ -13,7 +13,10 @@ function Todolist() {
                   <h4 className='navbarcolor fontstyle2'>To Do List</h4>
                   {/* <table classname='table table-bordered '> */}
                     
-                      <Todo />
+                      <Todo 
+                        allTodos={allTodos}
+                        onDelete={onDelete}
+                       />
              
 
 
