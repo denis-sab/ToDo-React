@@ -1,17 +1,23 @@
+import Todo from './Todo.jsx';
+
 function Todolist() {
   return (
     <div>
-      <div classname='vh-100'>
+      {/* <div classname='vh-100'> */}
        
-        <div classname='container'>
+        {/* <div classname='container'>
           <div classname='row '>
-            <div classname='col '>
+            <div classname='col '> */}
              
         
-                  <h4 className='navbarcolor text-white'>To Do List</h4>
-                  <br />
-                  <table classname='table table-bordered '>
+                  <h4 className='navbarcolor text-white fontstyle'>To Do List</h4>
+                  {/* <table classname='table table-bordered '> */}
                     
+                      <Todo />
+              
+
+
+
                       {/* <tr classname='tr1'>
                         <th classname='th1' >
                           No.
@@ -24,13 +30,12 @@ function Todolist() {
                         </th>
                       </tr> */}
                  
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    
+                  {/* </table> */}
+                {/* </div> */}
+              
+        {/* //     </div> */}
+        {/* // </div> */}
+    </div>  
   );
 }
 

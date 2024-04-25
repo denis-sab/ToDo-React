@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Todo from "./components/Todo"
 import Todolist from "./components/Todolist"
 import AddItem from "./components/AddItem"
 import "./App.css";
@@ -16,6 +15,11 @@ function App() {
     const {value} = target;
     setNewTodo((prevTodo) => ({...prevTodo, id: Date.now(), title: value}))
   }
+
+  const onDelete = ({TodoIdToRemove}) => {
+    setAllTasks((prev) => prev.filter((Todo) => Todo.id !== TodoIdToRemove));
+
+  }
   
   const [allTodos, setAllTodos] = useState([]);
     const onSubmit = (event) => {
@@ -25,6 +29,7 @@ function App() {
       setNewTodo({});
       
   };
+
   console.log(allTodos)
 
   const [localStorage, setLocalStorage] = useState();
