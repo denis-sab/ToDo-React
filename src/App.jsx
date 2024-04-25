@@ -16,10 +16,9 @@ function App() {
     setNewTodo((prevTodo) => ({...prevTodo, id: Date.now(), title: value}))
   }
   
-  const onDelete = ({TodoIdToRemove}) => {
+  const onDelete = (TodoIdToRemove) => {
     setAllTodos((prev) => prev.filter((Todo) => Todo.id !== TodoIdToRemove));
-
-  }
+  };
   
   const [allTodos, setAllTodos] = useState([]);
     const onSubmit = (event) => {
@@ -30,7 +29,7 @@ function App() {
       
   };
 
- 
+  console.log(allTodos)
 
   const [localStorage, setLocalStorage] = useState();
 
