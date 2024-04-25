@@ -13,7 +13,6 @@ function App() {
 
   useEffect(() => {
     const savedTodos = JSON.parse(localStorage.getItem('bigList') || '[]');
-    console.log('Datos recuperados del localStorage:', savedTodos);
     
     if (Array.isArray(savedTodos) && savedTodos.length > 0) {
       setAllTodos(savedTodos);
@@ -32,7 +31,6 @@ function App() {
   const onSubmit = (event) => {
     event.preventDefault();
     if (!newTodo.title) return;
-
     const updatedTodos = [newTodo, ...allTodos];
     setAllTodos(updatedTodos);
 
