@@ -1,11 +1,18 @@
 .iconssize {
-    height: 30px;
-    width: 30px;
+    height: 28px;
+    width: 28px;
   }
 
 .fontstyle {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: black;
+}
+
+.fontstyle2 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bolder;
+  color:#AC7D88;
+  text-shadow: 2px 2px 8px rgb(56, 12, 123);
 }
   
 .navbar {
@@ -35,6 +42,10 @@
   background-color: #FDF0D1;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
+}
+
+.contclr2 {
+  max-height: 15rem;
 }
 
 .todostyle {

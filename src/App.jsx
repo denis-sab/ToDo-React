@@ -43,7 +43,7 @@ function App() {
       <Header />
 
       <section className="cont d-flex justify-content-center">
-        <div className="col m-5 contclr border border-primary rounded">
+        <div className="col m-5 contclr border border-primary rounded contclr2">
             <AddItem 
               onChange={onChange}
               onSubmit={onSubmit}
