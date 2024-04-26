@@ -8,34 +8,28 @@ import Navbar from './components/navbar';
 import Header from "./components/header";
 
 function App() {
-  const [newTodo, setNewTodo] = useState({});
+  const [newTodo, setNewTodo] = useState({id: '', title: '', date: '', desc: ''});
   const [allTodos, setAllTodos] = useState([]);
-  const [dates, setDates] = useState({date: ''});
-  const [names, setNames] = useState('');
+  // const [dates, setDates] = useState({date: ''});
+  // const [names, setNames] = useState('');
 
   useEffect(() => {
-    const savedTodos = JSON.parse(localStorage.getItem('bigList') || '[]');
-    
-    if (Array.isArray(savedTodos) && savedTodos.length > 0) {
-      setAllTodos(savedTodos);
-    }
+    setAllTodos(JSON.parse(localStorage.getItem('bigList')));
   }, []);
 
   const onChange = ({ target }) => {
-    const { value } = target;
-    setNewTodo((prevTodo) => ({ ...prevTodo, id: Date.now(), title: value, date: '' }));
+    setNewTodo({...newTodo, id: Date.now(), [target.name] : target.value
+  });
   };
 
-  const onChange2 = ({ target }) => {
-    const {value} = target;
-    setDates({ date: value });
-    console.log(dates)
-  };
+  // const onChange2 = () => {
+  //   setDates(dates);
+  // };
 
-  const onChange3 = ({ target }) => {
-    const { value } = target;
-    setNames(value);
-  };
+  // const onChange3 = ({ target }) => {
+  //   const { value } = target;
+  //   setNames((prev) => ({...prev, value: value}));
+  // };
 
   const onDelete = (TodoIdToRemove) => {
     setAllTodos((prev) => prev.filter((Todo) => Todo.id !== TodoIdToRemove));
@@ -43,10 +37,10 @@ function App() {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    if (!newTodo.title) return;
-    const updatedTodos = [newTodo, ...allTodos];
-    setAllTodos(updatedTodos);
-    setNewTodo({});
+    if (!newTodo.title || '') return;
+    const updatedTodos = [{newTodo}];
+    setAllTodos(prevTodos => [...prevTodos, updatedTodos])
+    setNewTodo('');
   };
 
   useEffect(() => {
@@ -59,6 +53,8 @@ function App() {
     }
   }, [allTodos]);
 
+  console.log(allTodos)
+
   return (
     <>
       <Navbar />
@@ -67,18 +63,20 @@ function App() {
         <div className="col m-5 contclr border border-primary rounded contclr2">
           <AddItem 
             onChange={onChange}
-            onChange2={onChange2}
-            onChange3={onChange3}
+            // onChange2={onChange2}
+            // onChange3={onChange3}
             onSubmit={onSubmit}
             newTodo={newTodo}
-            dates={dates}
-            names={names}
+            // dates={dates}
+            // names={names}
           />
         </div>
         <div className="col m-5 contclr border border-primary rounded">
           <Todolist 
             onDelete={onDelete} 
             allTodos={allTodos}
+            // dates={dates}
+            // names={names}
           />
         </div>
       </section>
